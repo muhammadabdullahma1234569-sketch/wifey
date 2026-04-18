@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wifey </title>
+    <style>
+        /* CSS - Design Section */
+        :root {
+            --bg-color: #ffffff;
+            --text-dark: #09323d;
+            --accent: #478aa3;
+            --soft-border: #202629;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Garamond', serif; /* Elegant Classic Font */
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.8;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar */
+        header {
+            padding: 40px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--soft-border);
+        }
+
+        .logo {
+            font-size: 22px;
+            letter-spacing: 4px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            margin-left: 25px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            color: var(--accent);
+            transition: 0.4s;
+        }
+
+        nav button:hover, nav button.active {
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        /* Content Area */
+        .content-wrapper {
+            flex: 1;
+            padding: 0 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page {
+            display: none;
+            max-width: 700px;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: normal;
+            margin-bottom: 25px;
+            color: #000;
+        }
+
+        p {
+            font-size: 19px;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .divider {
+            width: 50px;
+            height: 1px;
+            background: var(--text-dark);
+            margin: 30px 0;
+        }
+
+        /* Quote Style */
+        .quote {
+            font-style: italic;
+            border-left: 2px solid var(--soft-border);
+            padding-left: 20px;
+            margin: 30px 0;
+            color: #ffffff;
+        }
+
+        footer {
+            padding: 40px 10%;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #b2bec3;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">SANA GULL</div>
+        <nav>
+            <button onclick="showPage('home')" id="btn-home" class="active">Silence</button>
+            <button onclick="showPage('care')" id="btn-care">Exhaustion</button>
+            <button onclick="showPage('mind')" id="btn-mind">Be-bas Faisla</button>
+            <button onclick="showPage('note')" id="btn-note">Health</button>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <section id="home" class="page active">
+            <h1>Mera questions jo itny din sy bolna cha rha hun 
+</h1>
+            <p>Tum ik baar bol kar to dekho k m mentally tor par ready nahi hun...... itni jaldi ye sab karne ki kya zaroorat hai.....?
+</p>
+            Meri soch k lyhaz tera answer<div class="divider"></div>
+            <p>Abdullah....... mujhy solution na do..... mujhe Advices na do....... mujhy sirf ye ehsas dilao k m tery sath hun har situation m.......  tum mujh pr gussa nahi karo gy...... M bohot thak gae hoon........... mujhy thora saans lene do....
+</p>
+<div class="divider"></div>Mamo ki puri family ko ye dhamki...... rishta ahi dena to sary rishty khatm..... to agr yaha koch bhi boly ya  kadam uthay gi, tabaahi hogi.
+
+        </section>
+
+        <section id="care" class="page">
+            <h1>The Silent Exhaustion</h1>
+            <p>To ny aj pury ghar ki safai ki aur...... tery knee m dard start ho gaya—ye sirf thakawat nahi hai. Jab insaan bohot zyada mental stress m hota hai....... to us ka jism (body) jawab dy detta hai.</p>
+            <div class="quote">
+                "Same teri bhi y situation hai......"
+            </div>
+            <p>Mehman ko  pata bhi hai k ghar m itni tension hai, phir bhi un ka aana... litlle awkward. to safae kar k shayad apne ghar walon ko dikhana chah rahi hai k Dekho m sab kar rahi hun..... ta k koi tujy taana na dy..... pr andar sy to toot rahi hai....... to jism ko thaka kar apny dimaag ka shor chupana chahti hai.........ye sab dekh kar mujy jo takleef hoti hai wo m hi janta hun........
+</p>
+        </section>
+
+        <section id="mind" class="page">
+            <h1>The Paralyzed Choice</h1>
+            <p>Sana......m smjta hun k to khamosh q hai..... Tujy lagta hai k agar tu ny kuch bola to ghar ki larai mazid bar jay gi....... aur agar tum ny kuch na kiya to tumhri zindagi kharab ho jay gi.......To is time  chakki  pis rahi hai....</p>
+            yaad rakhi k darr ka hal chup hona nahi hota..... darr ka hal "ik kadam agy bahir" ka hota hai....... <div class="divider"></div>
+            <p>Teri ye khamoshi mujy chir rahi hai. M maanta hun meri overthinking tumhy pareshan karti hai....... lkn is ko  control bhi to tu hi karti hai na? Jab bhi m kisi matter ko solve karny ki baat karta hoon...... tum baat taal deti ho... aesy kaisy hal nikalay ga?
+</p>
+        </section>
+
+        <section id="note" class="page">
+            <h1>The Healing & Prayer Content</h1>
+            <p>Sana, jab duniya k raaste band nzr aany la jay.......... to us Rab ka darwaza khulta hai jo dilon k haal janta hai..... M tumhry liye..... tumhari sehat k liye aur is saare trauma sy nikalny k liye ye dua karta hoon:</p>
+            <div class="quote">
+                "Dua-e-Shifa"
+            </div>
+            <p>Ya Allah, Sana ko kaamil shifa ata farma..... Us ky dard ko, uski jismani thakawat ko aur us ky dimaag ky har bojh ko ktm kar dy...... Usy wo sukoon dy jo sirf Teri taraf sy aata hai.....</p>
+            <div class="quote">
+                "Nijat ki Dua"
+            </div>
+            <p>Ya Muqallibal Quloob, us ky dil ko mazbooti ata kar...... Ye jo darr aur tabahi ka khauf usy ghairay howy hai...... usy apny hifz-o-amaan m le ly. Usy is kashmakash sy nikalny ka wo rasta dikha jo uski zindagi m khushiyan aur sukoon lay.</p>
+            <p>Sana, t akeli nahi ho. Is trauma ki har diwar giry gi..... aur har mushkil ky baad asani zaroori hai. Bs thora sa tawakkul aur thori c himmat.</p>
+            <p>Rest now. Everything else can wait.</p>
+        </section>
+    </div>
+
+    <footer>
+        &copy; Hawk 
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => p.classList.remove('active'));
+
+            // Remove active from buttons
+            const buttons = document.querySelectorAll('nav button');
+            buttons.forEach(b => b.classList.remove('active'));
+
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            document.getElementById('btn-' + pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
